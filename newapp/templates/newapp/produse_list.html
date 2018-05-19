@@ -6,10 +6,10 @@
 
     {% block content %}
     <ul>
-    {% for task in object_list %}
-        <li>{{ task.title}} - {{ task.created_at | date }}</li>
+    {% for newapp in object_list %}
+        <li>{{ newapp.title}} - {{ newapp.pret}} - {{ newapp.cantitate}}</li>
     {% empty %}
-        <li>No articles yet.</li>
+        <li>No food yet :( .</li>
     {% endfor %}
     </ul>
     {% endblock %}

@@ -1,0 +1,15 @@
+  {%extends "base.html" %}
+
+    {% block title %}
+        HELLO THESE ARE THE PRODUCTS
+    {% endblock %}
+
+    {% block content %}
+    <ul>
+    {% for newapp in object_list %}
+        <li>{{ newapp.title}}</li>
+    {% empty %}
+        <li>No articles yet.</li>
+    {% endfor %}
+    </ul>
+    {% endblock %}
